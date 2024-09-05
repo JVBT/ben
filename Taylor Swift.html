@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Taylor Swift Navigation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('Image/Front (1).jpg') no-repeat center center fixed, /* Background image */
+                  linear-gradient(135deg, #FFDDC1, #FFABAB); /* Soft pastel gradient */
+      background-attachment: fixed; /* Keeps the background fixed while scrolling */
+      background-size: cover; /* Ensure the background covers the entire viewport */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Full viewport height */
+      text-align: center; /* Center text and other inline elements */
+    }
+    .na {
+      background: linear-gradient(135deg, #FFDDC1, #ea9595); /* Taylor Swift pink theme */
+      padding: 10px 0; /* Vertical padding */
+      width: 100%; /* Full width */
+      position: fixed; /* Fixed positioning */
+      top: 0; /* Align to the top of the viewport */
+      left: 0; /* Align to the left of the viewport */
+      box-sizing: border-box; /* Ensure padding doesn't affect width */
+      z-index: 1000; /* Make sure it stays above other content */
+    }
+    .na a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+      display: inline-block; /* Align links inline */
+    }
+    .na a.active {
+      background: #FF6F61; /* Active link color */
+    }
+    .na a:hover {
+      background: #FF6F61; /* Hover effect */
+      transform: scale(1.05);
+    }
+    .nav-container {
+      max-width: 1200px; /* Optional max width for better readability */
+      margin: 0 auto; /* Center align the nav content */
+      text-align: center; /* Center text and links */
+    }
+    .animation {
+      margin-top: 80px; /* Space between navbar and image (consider height of nav bar) */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .animation img {
+      width: 600px; /* Adjust size as needed */
+      height: 540px; /* Maintain aspect ratio */
+      max-width: 90%; /* Responsive size, adjust as needed */
+      max-height: 80vh; /* Prevents the image from getting too tall */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar with links to different pages or sections -->
+  <div class="na">
+    <a href="Taylor Swift.html"><span>Home</span></a>
+    <a href="Inside2.html"><span>Song</span></a>
+  </div>
+  <h1 style="color: #fff;">Click This Photo</h1>
+  <!-- Centered image -->
+  <div class="animation">
+    <a href="Inside.html">
+      <img src="Image/Front (2).jpg" alt="logo">
+    </a>
+  </div>
+</body>
+</html>

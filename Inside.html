@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Taylor Swift Navigation</title>
+  <style>
+    * {
+      overflow: auto;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('Image/Back (1).png') no-repeat center center fixed, 
+                  linear-gradient(135deg, #FFDDC1, #FFABAB); 
+      background-size: cover; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .na {
+      background: linear-gradient(135deg, #FFDDC1, #ea9595);
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+
+    .na a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+
+    .na a.active {
+      background: #FF6F61;
+    }
+
+    .na a:hover {
+      background: #FF6F61;
+      transform: scale(1.05);
+    }
+
+    .animation {
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .animation img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    /* Blossom animation */
+    @keyframes blossom-fall {
+      0% {
+        transform: translateY(-150px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(calc(100vh + 150px)) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .blossoms, .leaves {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0; /* Ensure blossoms are behind content */
+    }
+
+    .blossoms div, .leaves div {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+
+    .blossoms div {
+      width: 25px;
+      height: 25px;
+      background: pink;
+      animation: blossom-fall 5s infinite;
+    }
+
+    .leaves div {
+      width: 30px;
+      height: 20px;
+      background: #6dbf4e;
+      transform: rotate(-30deg);
+      animation: leaf-fall 5s infinite;
+    }
+
+    @keyframes leaf-fall {
+      0% {
+        transform: translateY(-150px) rotate(-30deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(calc(100vh + 150px)) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Blossom positions and delays */
+    .blossoms div:nth-child(1) { left: 10%; animation-delay: 1s; }
+    .blossoms div:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .blossoms div:nth-child(3) { left: 50%; animation-delay: 3s; }
+    .blossoms div:nth-child(4) { left: 70%; animation-delay: 4s; }
+    .blossoms div:nth-child(5) { left: 90%; animation-delay: 5s; }
+
+    /* Leaf positions and delays */
+    .leaves div:nth-child(1) { left: 15%; animation-delay: 1s; }
+    .leaves div:nth-child(2) { left: 35%; animation-delay: 3s; }
+    .leaves div:nth-child(3) { left: 55%; animation-delay: 5s; }
+    .leaves div:nth-child(4) { left: 75%; animation-delay: 7s; }
+    .leaves div:nth-child(5) { left: 95%; animation-delay: 9s; }
+
+  </style>
+</head>
+<body>
+  <!-- Blossoms and Leaves animation -->
+  <div class="blossoms">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="leaves">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation bar with links to different pages or sections -->
+  <div class="na">
+    <a href="Taylor Swift.html"><span>Main</span></a>
+  </div>
+
+  <!-- Background music autoplay with muted -->
+  <audio id="background-music" autoplay muted loop preload="auto">
+    <source src="Image/y2mate.com - Taylor Swift  Sweet Nothing Official Lyric Video_144p.3gp" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Play music after user interaction
+    document.addEventListener('click', function() {
+      var audio = document.getElementById('background-music');
+      audio.muted = false; // Unmute after user clicks
+      audio.play();
+    });
+  </script>
+
+  <h1 style="color: #fff;">Hello</h1>
+  <!-- Centered image -->
+  <div class="animation">
+    <a href="Inside.html">
+      <img src="Image/Back (3).png" alt="Image">
+    </a>
+  </div>
+  <br>
+  <br>
+  <h2 style="font-size: 1.5em; color: #ff1500;">
+    Hello! All I want to say is that you're attractive, and I like you. We were kidding around at first, but it turned out to be real, and I find it difficult to keep it a secret. It's unfortunate that I had to go to such lengths to tell you this, but I really appreciate you wishing me luck in my pageant. I'm overjoyed. I also want to congratulate you and wish you luck in your upcoming exams. I'll take your response with respect. I appreciate you taking the time to read.
+  </h2>
+
+</body>
+</html>
